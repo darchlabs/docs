@@ -277,7 +277,7 @@ This endpoint is for deleting a synced event
 
 ## **Restart Event**
 
-`POST /api/v1/events/:address:event_name/restart`
+`POST /api/v1/events/:address/:event_name/restart`
 
 This endpoint is for reseting a synced event. It will remove the error, so the cronjob will execute again the event.
 
