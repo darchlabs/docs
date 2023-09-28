@@ -1,13 +1,16 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
 .heroBanner {
   padding: 4rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
+  color: #D53F8C;
+  background: url('/img/pattern.svg') no-repeat center center, #ffffff; /* Pink shades from Material UI */
+  background-position: center; /* Center the image */
+  background-repeat: repeat;
+  height: 100vh; /* Make it cover the full viewport height */
+  display: flex;
+  align-items: center; /* Vertically center the content */
+  justify-content: center; /* Horizontally center the content */
 }
 
 @media screen and (max-width: 996px) {
@@ -16,8 +19,61 @@
   }
 }
 
+.hero__title {
+  font-size: 2.5rem; /* Tamaño por defecto para pantallas grandes */
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  .hero__title {
+    font-size: 1.5rem; /* Tamaño reducido para dispositivos móviles */
+  }
+}
+
 .buttons {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 2rem;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 4rem;
+}
+
+.featureItem {
+  flex: 1;
+  margin: 1rem;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  .features {
+    flex-direction: column;
+  }
+
+  .featureItem {
+    margin: 1rem 0;
+    max-width: 100%;
+  }
+}
+
+.partners {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+  padding: 2rem 0;
+}
+
+.partnerLogo {
+  margin: 1rem;
+  max-width: 150px;
+  filter: grayscale(100%); /* Make the logos grayscale for a more uniform look */
 }
