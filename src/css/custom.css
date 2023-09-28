@@ -28,3 +28,20 @@
   --ifm-color-primary-lightest: #f536b5;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* Light Footer: Change the footer background color */
+footer.footer-light {
+  background-color: #ED64A6;
+}
+
+/* Light Footer: Change the font color */
+footer.footer-light .footer__link-item a,
+footer.footer-light .footer__title,
+footer.footer-light .footer__copyright {
+  color: #ffffff;
+}
+
+/* Light Footer: Change the font color on hover */
+footer.footer-light .footer__link-item a:hover {
+  color: #ffffff;
+}
