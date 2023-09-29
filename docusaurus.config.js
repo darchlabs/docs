@@ -6,12 +6,12 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Darchlabs Documentation",
-  tagline: "Build better, faster and autonomous decentralized applications",
+  title: "DarchLabs Documentation",
+  tagline: "Revolutionizing Web3 Infrastructure",
   favicon: "img/logo.png",
 
   // Set the production url of your site here
-  url: "https://darchlabs.com",
+  url: "https://www.darchlabs.com",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
@@ -84,7 +84,7 @@ const config = {
         ],
       },
       footer: {
-        style: "dark",
+        style: "light",
         links: [
           {
             title: "Docs",
@@ -122,12 +122,16 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `© ${new Date().getFullYear()} DarchLabs. Crafted with ❤️ using Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
       },
+      colorMode: {
+        defaultMode: 'light',
+        disableSwitch: true,
+        respectPrefersColorScheme: true,
+      }
     }),
 };
 
