@@ -60,9 +60,9 @@ values={[
 - Add the following code to `webhook.js`:
 
 ```js
-const { Util } = require("darchlabs");
+const { server } = require("darchlabs");
 
-Util.ListenServer(3000, "/api/v1/webhook", (wh) => {
+server.ListenServer(3000, "/api/v1/webhook", (wh) => {
   console.log(`Received webhook with ID: ${wh.id}`);
 });
 ```
@@ -82,9 +82,9 @@ Util.ListenServer(3000, "/api/v1/webhook", (wh) => {
 - Add the following code to `webhook.ts`:
 
 ```ts
-import { Util, type Webhook } from "darchlabs";
+import { server, type Webhook } from "darchlabs";
 
-Util.ListenServer(3000, "/api/v1/webhook", (wh: Webhook) => {
+server.ListenServer(3000, "/api/v1/webhook", (wh: Webhook) => {
   console.log(`Received webhook with ID: ${wh.id}`);
 });
 ```

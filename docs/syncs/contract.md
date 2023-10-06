@@ -45,7 +45,7 @@ const created = await synchronizers.contracts.createContract({
   name: "MyContract",
   network: "ethereum",
   address: "0x1234abcd...",
-   abi: [/* ABI contract json */];
+  abi: [/* ABI contract json */];
 });
 
 console.log("created contract", created);
@@ -64,7 +64,7 @@ const created = await synchronizers.contracts.createContract({
   name: "MyContract",
   network: "ethereum",
   address: "0x1234abcd...",
-   abi: [/* ABI contract json */];
+  abi: [/* ABI contract json */];
 });
 
 console.log("created contract", created);
@@ -331,6 +331,7 @@ const { synchronizers } = new Darchlabs("<YOUR_API_KEY>");
 
 await synchronizers.contracts.updateContract("0x1234abcd...", {
   name: "UpdatedContractName",
+  webhook: "https://www.fakeapi.com/api/v1/webhook",
 });
 
 console.log("Contract updated successfully");
@@ -346,6 +347,7 @@ const { synchronizers } = new Darchlabs("<YOUR_API_KEY>");
 
 await synchronizers.contracts.updateContract("0x1234abcd...", {
   name: "UpdatedContractName",
+  webhook: "https://www.fakeapi.com/api/v1/webhook",
 });
 
 console.log("Contract updated successfully");

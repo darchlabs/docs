@@ -47,14 +47,14 @@ values={[
 
 ```js
 const Darchlabs = require("darchlabs");
-const { Synchronizers } = new Darchlabs("<YOUR_API_KEY>");
+const { synchronizers } = new Darchlabs("<YOUR_API_KEY>");
 
 // new contract to synchronize
-const created = await Synchronizers.Contracts.createContract({
+const created = await synchronizers.Contracts.createContract({
   name: "MyContract",
   network: "ethereum",
   address: "0x1234abcd...",
-   abi: [/* ABI contract json */];
+  abi: [/* ABI contract json */];
 });
 console.log("contract", created);
 
@@ -76,7 +76,7 @@ const created = await synchronizers.contracts.createContract({
   name: "MyContract",
   network: "ethereum",
   address: "0x1234abcd...",
-   abi: [/* ABI contract json */];
+  abi: [/* ABI contract json */];
 });
 console.log("contract", created);
 

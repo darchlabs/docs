@@ -35,9 +35,9 @@ values={[
 <TabItem value="js">
 
 ```js
-const { Util } = require("darchlabs");
+const { server } = require("darchlabs");
 
-Util.ListenServer(3000, "/api/v1/webhook", (wh) => {
+server.ListenServer(3000, "/api/v1/webhook", (wh) => {
   console.log(`received webhook with ID: ${wh.id}`);
 });
 ```
@@ -46,9 +46,9 @@ Util.ListenServer(3000, "/api/v1/webhook", (wh) => {
 <TabItem value="ts">
 
 ```ts
-import { Util, type Webhook } from "darchlabs";
+import { server, type Webhook } from "darchlabs";
 
-Util.ListenServer(3000, "/api/v1/webhook", (wh: Webhook) => {
+server.ListenServer(3000, "/api/v1/webhook", (wh: Webhook) => {
   console.log(`received webhook with ID: ${wh.id}`);
 });
 ```
@@ -70,18 +70,18 @@ values={[
 <TabItem value="js">
 
 ```js
-const { Util } = require("darchlabs");
+const { server } = require("darchlabs");
 const dotenv = require("dotenv");
 
 dotenv.config();
 
-Util.ListenServer(3000, "/api/v1/webhook", async (wh) => {
+server.ListenServer(3000, "/api/v1/webhook", async (wh) => {
   console.log(`received webhook with ID: ${wh.id}`);
 
   // do anything with the webhook ...
 
   // trigger the method on the smart contract in response to the webhook
-  const tx = await Util.TriggerEVMMethod({
+  const tx = await server.TriggerEVMMethod({
     network: "mumbai",
     nodeUrl: process.env.NODE_URL!,
     abi: [/* ABI contract json */],
@@ -98,18 +98,18 @@ Util.ListenServer(3000, "/api/v1/webhook", async (wh) => {
 <TabItem value="ts">
 
 ```ts
-import { Util, type Webhook } from "darchlabs";
+import { server, type Webhook } from "darchlabs";
 import dotenv from "dotenv";
 
 dotenv.config();
 
-Util.ListenServer(3000, "/api/v1/webhook", async (wh: Webhook) => {
+server.ListenServer(3000, "/api/v1/webhook", async (wh: Webhook) => {
   console.log(`received webhook with ID: ${wh.id}`);
 
   // do anything with the webhook ...
 
   // trigger the method on the smart contract in response to the webhook
-  const tx = await Util.TriggerEVMMethod({
+  const tx = await server.TriggerEVMMethod({
     network: "mumbai",
     nodeUrl: process.env.NODE_URL!,
     abi: [
@@ -129,7 +129,7 @@ Util.ListenServer(3000, "/api/v1/webhook", async (wh: Webhook) => {
 
 :::info
 
-The `Util.TriggerEVMMethod` method is implement ed using the [ethers.js library](https://docs.ethers.io/v5/). You can view its implementation [here](https://github.com/darchlabs/client-nodejs/blob/main/src/util/evm-trigger-method.ts). The `increment` method is from our demo Solidity contract, which can be found [here](https://github.com/darchlabs/demo-integration-starter-kit/blob/main/demo-storage-contract/storage.sol).
+The `server.TriggerEVMMethod` method is implement ed using the [ethers.js library](https://docs.ethers.io/v5/). You can view its implementation [here](https://github.com/darchlabs/client-nodejs/blob/main/src/server/evm-trigger-method.ts). The `increment` method is from our demo Solidity contract, which can be found [here](https://github.com/darchlabs/demo-integration-starter-kit/blob/main/demo-storage-contract/storage.sol).
 
 :::
 
